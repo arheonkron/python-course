@@ -18,10 +18,11 @@ def is_adult(age: int) -> bool:
 def main() -> None:
     name = input("Как тебя зовут? ").strip() or "Незнакомец"
     lang = input("Какой твой любимый язык? ").strip() or "Python"
+    age = ask_age()
     status = "совершеннолетний" if is_adult(age) else "несовершеннолетний"
-    print(f"Ты {status}.")
     print(greeting(name, lang))
-    print(is_adult(age))
+    print(f"Ты {status}.")
+    
 
 
 if __name__ == "__main__":
